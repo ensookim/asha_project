@@ -11,17 +11,14 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
-import lombok.AccessLevel;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 /**
  * 상품 정보를 담는 엔티티
  */
 
 @Getter
+@Setter
 @ToString
 @Entity
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
@@ -59,6 +56,7 @@ public class ProductEntity {
         this.categories = categories;
         this.imageUrl = imageUrl;
     }
+
 
     // 상품 정보 수정 메서드
     public void updateProduct(String productName, String description, String imageUrl) {
